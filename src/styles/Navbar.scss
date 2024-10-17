@@ -1,0 +1,109 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #343a40;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.5s ease-in-out;
+  
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #ffffff;
+      animation: fadeIn 0.5s ease-in-out;
+  
+      &:hover {
+        color: #ffc107;
+      }
+    }
+  
+    .nav-links {
+      display: flex;
+      align-items: center;
+      list-style: none;
+  
+      li {
+        margin-left: 30px;
+  
+        a {
+          font-size: 1.2rem;
+          color: #f8f9fa;
+          text-decoration: none;
+          transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  
+          &:hover {
+            color: #ffc107;
+            transform: translateY(-3px);
+          }
+        }
+      }
+    }
+  
+    .nav-button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #fff;
+      background-color: #28a745;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  
+      &:hover {
+        background-color: #218838;
+        transform: scale(1.05);
+      }
+    }
+  
+    // Mobile Menu (Hamburger)
+    .mobile-menu {
+      display: none;
+      cursor: pointer;
+  
+      .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 4px;
+        transition: all 0.3s ease;
+      }
+    }
+  
+    // Media Queries for Responsiveness
+    @media (max-width: 768px) {
+      padding: 15px 30px;
+  
+      .nav-links {
+        display: none;
+      }
+  
+      .mobile-menu {
+        display: block;
+      }
+    }
+  
+    // Animations
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  
+    @keyframes slideDown {
+      0% {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+  

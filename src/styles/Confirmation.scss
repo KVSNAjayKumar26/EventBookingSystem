@@ -1,0 +1,57 @@
+.confirmation {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 30px;
+    background-color: #f0f9ff;;
+    border: 1px solid #d1ecf1;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #0c5460;
+        animation: slideDown 0.5s ease-in-out;
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        color: #004085;
+        line-height: 1.6;
+        animation: fadeInUp 0.5s ease-in-out;
+    }
+
+    @media (max-width: 768px) {
+        padding: 20px;
+        h2 {
+            font-size: 1.5rem;
+        }
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    // Animations
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideDown {
+        0% {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
